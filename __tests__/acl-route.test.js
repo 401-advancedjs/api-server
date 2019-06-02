@@ -17,10 +17,10 @@ router.get('/everything') should require the superuser ca
 
 process.env.SECRET='test';
 
-const {startDB,stopDB} = require('../../supergoose.js');
-const auth = require('../../../src/auth/middleware.js');
-const Users = require('../../../src/auth/users-model.js');
-const Roles = require('../../../src/auth/role-model.js');
+const {startDB,stopDB} = require('./supergoose.js');
+const auth = require('../src/auth-server/auth/middleware.js');
+const Users = require('../src/auth-server/auth/models/users-model.js');
+const Roles = require('../src/auth-server/auth/models/role-model');
 
 let users = {
   admin: {username: 'admin', password: 'password', role: 'admin'},
