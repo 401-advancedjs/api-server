@@ -4,7 +4,7 @@ process.env.SECRET = 'test';
 
 const jwt = require('jsonwebtoken');
 
-const Roles = require('../src/auth-server/auth/role-model.js');
+const Roles = require('../src/auth-server/auth/models/role-model.js');
 const server = require('../src/app.js').server;
 const supergoose = require('./supergoose');
 

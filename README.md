@@ -12,6 +12,7 @@
 #### Documentation
 * [jwt docs](https://www.npmjs.com/package/jsonwebtoken)
 * [mongo docs](https://mongoosejs.com/docs/guide.html)
+* [httpie docs](https://httpie.org/doc)
 
 ### Modules
 #### `handleDelete.js`
