@@ -1,8 +1,6 @@
 'use strict';
 
-// const rootDir = process.cwd();
 const players = require('../src/models/players/players-model');
-
 const supergoose = require('./supergoose.js');
 
 beforeAll(supergoose.startDB);

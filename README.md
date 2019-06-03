@@ -1,7 +1,7 @@
 ![CF](http://i.imgur.com/7v5ASc8.png) LAB
 =================================================
 
-## Bearer Authorization
+## API server
 
 ### Author: Melissa Stock
 
@@ -88,9 +88,15 @@
   * Auth Keys do not expire
   * Auth keys can login a user as a token would
   * single use tokens are not regenerated
-  * auth middleware grants access to create/delete/read/update to the authorized users
+  * auth middleware grants access to create/delete/read/update to the authorized 
+  users
+  * Model finder middleware
 * What assertions need to be / should be made?
+  * Assertions on the data shape returned from the API routes
+  * Assertions on the OAuth chooser
 
 #### UML
 <!-- ![authorization uml](./auth-server/assets/uml.jpg) -->
+![auth uml](./assets/auth.jpg)
+![api uml](./assets/api.jpeg)
 

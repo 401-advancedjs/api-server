@@ -1,20 +1,5 @@
 'use strict';
 
-/*
-
-router.get('/public-stuff') should be visible by anyone
-router.get('/hidden-stuff') should require only a valid login
-router.get('/something-to-read') should require the read capability
-router.post('/create-a-thing) should require the create capability
-router.put('/update) should require the update capability
-router.patch('/jp) should require the update capability
-router.delete('/bye-bye) should require the delete capability
-router.get('/everything') should require the superuser ca
-
-*/
-
-'use strict';
-
 process.env.SECRET='test';
 
 const {startDB,stopDB} = require('./supergoose.js');

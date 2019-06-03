@@ -1,4 +1,5 @@
 'use strict';
+
 /**
 * Controls the flow of adding an entry to the database
 * @param {object} request - contains the request

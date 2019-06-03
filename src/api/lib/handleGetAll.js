@@ -1,4 +1,5 @@
 'use strict';
+
 /**
 * Gets all the data
 * @param {object} request - contains the request
