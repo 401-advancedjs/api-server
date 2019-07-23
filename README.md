@@ -1,31 +1,46 @@
 ![CF](http://i.imgur.com/7v5ASc8.png) LAB
 =================================================
 
-## Bearer Authorization
+## API server
 
 ### Author: Melissa Stock
 
 ### Links and Resources
-* [submission PR](https://github.com/401-advancedjs/bearer-auth/pull/2)
+* [submission PR](https://github.com/401-advancedjs/api-server/pull/1)
 * [travis](https://www.travis-ci.com/)
 
 #### Documentation
 * [jwt docs](https://www.npmjs.com/package/jsonwebtoken)
+* [mongo docs](https://mongoosejs.com/docs/guide.html)
+* [httpie docs](https://httpie.org/doc)
 
 ### Modules
+#### `handleDelete.js`
+#### `handleGetAll.js`
+#### `handleGetOne.js`
+#### `handlePost.js`
+#### `handlePut.js`
+#### `v1.js`
+#### `role-model.js`
+#### `users-model.js`
+#### `acl-router.js`
 #### `middleware.js`
 #### `router.js`
-#### `acl-router.js`
-#### `users-model.js`
-#### `role-model.js`
 #### `404.js`
 #### `error.js`
+#### `model-finder.js`
+#### `categories-model.js`
+#### `players-model.js`
+#### `players-schema.js`
+#### `teams-model.js`
+#### `teams-schema.js`
+#### `memory-model.js`
+#### `mongo-model.js`
 #### `app.js`
 
 ##### Exported Values and Methods
 
 ###### `_authBasic(authString) -> object`
-
 ###### `_authBearer(authString) -> object`
 
 ### Setup
@@ -41,7 +56,11 @@
 * Endpoint: `/signin`
   * Returns a JSON object with user data in it.
 * Endpoint: `/key`
-  Return a JSON object with user data in it.
+  * Return a JSON object with user data in it.
+* Endpoint: `/api/v1/:model`
+  * Return a JSON object with data from all things within the model.
+* Endpoint: `/api/v1/:model/:id`
+  * Return a JSON object with data about specific model and id selected.
 * Endpoint: `/public-stuff`
   Return a string 'from public stuff'.
 * Endpoint: `/hidden-stuff`
@@ -69,9 +88,15 @@
   * Auth Keys do not expire
   * Auth keys can login a user as a token would
   * single use tokens are not regenerated
-  * auth middleware grants access to create/delete/read/update to the authorized users
+  * auth middleware grants access to create/delete/read/update to the authorized 
+  users
+  * Model finder middleware
 * What assertions need to be / should be made?
+  * Assertions on the data shape returned from the API routes
+  * Assertions on the OAuth chooser
 
 #### UML
-![authorization uml](./auth-server/assets/uml.jpg)
+<!-- ![authorization uml](./auth-server/assets/uml.jpg) -->
+![auth uml](./assets/auth.jpg)
+![api uml](./assets/api.jpeg)
 
